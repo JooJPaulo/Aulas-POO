@@ -2,21 +2,20 @@ import java.util.Scanner;
 
 public class Fibonacci {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int posicao;
-        int num1 = 1;
-        int num2 = 1;
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Digite a quantidade de números da sequência de Fibonacci que deseja: ");
+            int quantidade = scanner.nextInt();
+            
+            int num1 = 0, num2 = 1;
+            System.out.print("Sequência de Fibonacci: " + num1 + " " + num2);
 
-        System.out.println("Digite um número: ");
-        posicao = scanner.nextInt();
-    }
-
-    public int fibo(int posicao) {
-        if (posicao <= 2) {
-            return 1;
-        } else {
-            return fibo(posicao - 1) + fibo(posicao - 2);
+            for (int i = 2; i < quantidade; i++) {
+                int num3 = num1 + num2;
+                System.out.print(" " + num3);
+                num1 = num2;
+                num2 = num3;
+            }
+            System.out.println();
         }
     }
-
 }
