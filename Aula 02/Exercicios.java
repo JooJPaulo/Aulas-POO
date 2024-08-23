@@ -12,10 +12,10 @@ public class Exercicios {
 			System.out.println("Digite o segundo número: ");
 			num2 = scanner.nextInt();
 
-			System.out.println("A soma dos dois números é: ", num1 + num2);
-			System.out.println("A diferença dos dois números é: ", num1 - num2);
-			System.out.println("o produto dos dois números é: ", num1 * num2);
-			System.out.println("A divisão dos dois números é: ", num1 / num2);
+			System.out.println("A soma dos dois números é: " + (num1 + num2));
+			System.out.println("A diferença dos dois números é: " + (num1 - num2));
+			System.out.println("o produto dos dois números é: " + (num1 * num2));
+			System.out.println("A divisão dos dois números é: " + (num1 / num2));
 		}
 
 	}
