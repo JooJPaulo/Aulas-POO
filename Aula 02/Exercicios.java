@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Exercicios {
 	public static void main(String[] args) {
-		/*Exercício 01*/
+			/*Exercício 01*/
 				/*
-				Scanner scanner = new Scanner(System.in)) {
+					Scanner scanner = new Scanner(System.in); 
 					int num1, num2;
 		
 					System.out.println("Digite o primeiro número: ");
@@ -17,22 +17,32 @@ public class Exercicios {
 					System.out.println("A diferença dos dois números é: " + (num1 - num2));
 					System.out.println("o produto dos dois números é: " + (num1 * num2));
 					System.out.println("A divisão dos dois números é: " + (num1 / num2));
-				
 				*/
+				
 				/* Exercício 02 */
 				/*
-				Scanner scanner = new Scanner(System.in)) {
-				String num;
+				Scanner scanner = new Scanner(System.in); 
+				int num;
 
 				System.out.println("Digite um número de 05 dígitos: ");
-				num = scanner.next();
+				num = scanner.nextInt();
 
-				if (num.length() == 5) {
-					// Imprimir os dígitos separados por três espaços
-					System.out.println("Número: " + num.charAt(0) + "   " + num.charAt(1) + "   " + num.charAt(2) + "   " + num.charAt(3) + "   " + num.charAt(4));
-				} else {
-					System.out.println("Por favor, digite um número com exatamente 5 dígitos.");
-					*/
+				int digito1 = num / 10000;
+				num = num % 10000;
+
+				int digito2 = num / 1000;
+				num = num % 1000;
+
+				int digito3 = num / 100;
+				num = num % 100;
+
+				int digito4 = num / 10;
+				num = num % 10;
+
+				int digito5 = num;
+
+				System.out.println(digito1 + "   " + digito2 + "   " + digito3 + "   " + digito4 + "   " + digito5);
+				*/
 
 				/* Exercício 03 */
 				/*
@@ -64,6 +74,7 @@ public class Exercicios {
 				*/
 
 				/* Exercício 04 */
+				/*
 				Scanner scanner = new Scanner(System.in);
 				int segundos;
 
@@ -83,6 +94,6 @@ public class Exercicios {
 				System.out.println("Horas: " + horas);
 				System.out.println("Minutos: " + minutos);
 				System.out.println("Segundos: " + segundos);
+				*/
 		}
 	}
-
