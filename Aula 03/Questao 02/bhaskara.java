@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class bhaskara {
+public class Bhaskara {
     public static void main(String[] args) {
 		double a, b, c, delta, x1, x2;
 		
