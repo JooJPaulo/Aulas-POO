@@ -1,24 +1,6 @@
 import java.util.Scanner;
 
 public class Viagem {
-/* Exercício resolvido não seguindo o princípio da orientação a objetos
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int distancia;
-        int combustivel;
-        double consumo;
-
-        System.out.print("Distância percorrida (km): ");
-        distancia = scanner.nextInt();
-
-        System.out.print("Combustível gasto (l): ");
-        combustivel = scanner.nextInt();
-
-        consumo = distancia / (double)combustivel;
-
-        System.out.println("Consumo médio: " + consumo + " km/l");
-    }
-*/
 
     private int km;
         private static int totalKm;
@@ -34,6 +16,56 @@ public class Viagem {
             totalLitros += litros;
         }
 
+        public String getTrajeto() {
+            return this.trajeto;
+        }
+
+        public double consumo() {
+            return this.km / this.litros;
+        }
+
+        public int getKm() {
+            return this.km;
+        }
+
+        public int getLitros() {
+            return this.litros;
+        }
+
+        public static int totalKm() {
+            return totalKm;
+        }
+
+        public static int totalLitros() {
+            return totalLitros;
+        }
         
-        
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            String trajeto;
+            int km;
+            int litros;
+            Viagem viagem;
+            char continuar;
+            
+            do {
+                System.out.print("Trajeto: ");
+                trajeto = scanner.nextLine();
+                
+                System.out.print("Distância (km): ");
+                km = scanner.nextInt();
+                
+                System.out.print("Litros: ");
+                litros = scanner.nextInt();
+                
+                viagem = new Viagem(trajeto, km, litros);
+                
+                System.out.println("Deseja continuar (s/n)? ");
+                continuar = scanner.next().charAt(0);
+            } while (continuar == 's');
+            
+            System.out.println("Total de km percorridos: " + Viagem.totalKm());
+            System.out.println("Total de litros gastos: " + Viagem.totalLitros());
+            
+        }
 }
