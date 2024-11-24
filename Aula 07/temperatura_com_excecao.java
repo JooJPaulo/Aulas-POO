@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class temperatura_com_excecao {
+public class Temperatura_com_excecao {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Digite a temperatura: ");
